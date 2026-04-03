@@ -51,10 +51,10 @@ router.get("/", protect, authorize("admin"), getUsers);
  *                 example: Kishan
  *               email:
  *                 type: string
- *                 example: kishan@gmail.com
+ *                 example: kishankr2613@gmail.com
  *               password:
  *                 type: string
- *                 example: 123456
+ *                 example: 54321
  *     responses:
  *       201:
  *         description: User created successfully
@@ -78,10 +78,10 @@ router.post("/register", createUser);
  *             properties:
  *               email:
  *                 type: string
- *                 example: kishan@gmail.com
+ *                 example: kishankr2613@gmail.com
  *               password:
  *                 type: string
- *                 example: 123456
+ *                 example: 54321
  *     responses:
  *       200:
  *         description: Login successful (returns JWT)

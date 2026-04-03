@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 
 export const createUser = async (req, res) => {
   try {
-    const { name, email, password, role } = req.body;
+    const { name, email, password } = req.body;
 
     // validation
     if (!name || !email || !password) {
@@ -25,7 +25,8 @@ export const createUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      role: role || "viewer", // default role
+      role: "viewer",
+      status: "active"
     });
 
     res.status(201).json({
